@@ -1,0 +1,66 @@
+.container1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.containerImage {
+    max-height: 60vh;
+    height: 100%;
+    object-fit: cover;
+
+}
+.img {
+    margin-top: 50vh;
+}
+.containerForm {
+    justify-content: end;
+    margin-top: 2vh;
+    margin-right: 0%;
+}
+
+.containerNeg {
+    width: 400px;
+    border: 1px solid;
+    padding: 25px;
+    border-radius: 10px;
+    border-color: #bab5b5;
+    background-color:  #00000006;
+    max-height: 500px;
+    height: 100%;
+}
+
+.buttonNeg {
+    width: 100%;
+    margin-top: 4rem;
+    background-color:red;
+    box-shadow: #761212 4px 4px 0px;
+    border-radius: 8px;
+    color: #fff;
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.buttonNeg:hover {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #761212 0px 0px 0px;
+}
+
+.containerInfo {
+    padding: 25px;
+    margin-top: 2vh;
+    background-color: #00000006;
+    border-radius: 10px;
+    border-color: #bab5b5;
+    margin-right: 8vh;
+    border: 1px solid #bab5b5;
+}
+h1{
+    color:green;
+}
+h6{
+    color:red;
+}
+/* 
+.formNegociar {
+    margin-top: 4rem;
+} */

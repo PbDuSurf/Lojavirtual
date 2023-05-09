@@ -1,0 +1,40 @@
+<div class="container containerVender mt-5 p-5">
+    <form [formGroup]="venderForm" (ngSubmit)="onSubmit()">
+        <div class="text-center mb-5">
+            <h1>Cadastro de Produto</h1>
+        </div>
+        <div class="row mb-4 mt-4">
+        
+            <div class="col">
+                <input [(ngModel)]="produto.imagem" formControlName="imagem" type="text" class="form-control" placeholder="Link da imagem">
+                <small class="text-danger" *ngIf="imagem?.invalid && imagem?.touched">
+                    <span *ngIf="imagem?.hasError('required')">O link da imagem é obrigatório!</span>
+                </small>
+            </div>
+        </div>
+        <div class="row mb-4 mt-4">
+            <div class="col">
+                <input [(ngModel)]="produto.preco" formControlName="preco" type="number" class="form-control" min="40" placeholder="Preço">
+                <small *ngIf="preco?.touched && preco?.invalid" class="text-danger">
+                    <span *ngIf="preco?.hasError('required')">O preço é obrigatório!</span>
+                    <span *ngIf="preco?.hasError('min')">O preço mínimo é R$40</span>
+                </small>
+            </div>
+        </div>
+        <div class="row mb-4 mt-4">
+            <div class=" mt-4">
+                <input [(ngModel)]="produto.descricao" formControlName="descricao" type="text" class="form-control"
+                    placeholder="Descrição e especificações">
+                <small class="text-danger" *ngIf="descricao?.invalid && descricao?.touched">
+                    <span *ngIf="descricao?.hasError('required')">A descricao é obrigatória!</span>
+                    <span *ngIf="descricao?.hasError('minlength')">O minimo são 10 caracteres</span>
+                </small>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="button btn" [disabled]="venderForm.invalid">
+                Publicar Anúncio
+            </button>
+        </div>
+    </form>
+</div>

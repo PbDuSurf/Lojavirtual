@@ -1,0 +1,20 @@
+.nav-bar {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.nav-b {
+    background-color:red;
+    font-size: large;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #bebebe;
+}
